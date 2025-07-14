@@ -1,0 +1,9 @@
+<h1 class="title">Customer List</h1>
+
+<div class="columns is-multiline">
+  <% @customers.each do |customer| %>
+    <div class="column is-one-quarter">
+      <%= render "customer", customer: customer %>
+    </div>
+  <% end %>
+</div>
