@@ -12,5 +12,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root 'customers#index'
   resources :customers, only: [:index]
+
+  get 'customers/alphabetized', to: 'customers#alphabetized', as: 'customers_alphabetized'
+  get 'customers/missing_email', to: 'customers#missing_email', as: 'customers_missing_email'
 end
